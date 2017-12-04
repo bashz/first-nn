@@ -1,0 +1,8 @@
+bower_components/
+node_modules/
+!generations/dummy
+generations/
+
+images/*/processed
+
+*~

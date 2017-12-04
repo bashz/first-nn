@@ -1,0 +1,10 @@
+{
+  "name": "tuto-nn",
+  "description": "Formation Neural Networks",
+  "version": "0.0.1",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "reveal.js":"3.2.0"
+  }
+}

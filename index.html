@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formation Neural networks</title>
+        <meta charset="UTF-8">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+        <link rel="icon" href="/favicon.ico">
+        <link rel="stylesheet" href="bower_components/reveal.js/css/reveal.css">
+        <link rel="stylesheet" href="bower_components/reveal.js/lib/css/zenburn.css">
+        <link rel="stylesheet" href="bower_components/reveal.js/css/theme/blood.css" id="theme">
+        <script>
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match(/print-pdf/gi) ? 'bower_components/reveal.js/css/print/pdf.css' : 'bower_components/reveal.js/css/print/paper.css';
+            document.getElementsByTagName('head')[0].appendChild(link);
+        </script>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <h1>Formation Neural Networks</h1>
+                    <p>
+                        <small>Présenté par <a href="https://www.facebook/bash10">Béchir</a></small>
+                    </p>
+                </section>
+                <section>
+                    <h1>Les termes techniques</h1>
+                    <li>AI</li>
+                    <li>Machine learning</li>
+                    <li>Fuzzy control system (1980)</li>
+                    <li class="fragment grow highlight-red">Neural Networks</li>
+                    <li>Deep learning</li>
+                    <li>Data Science</li>
+                </section>
+                <section>
+                    <h3>Le principe</h3>
+                    <section>
+                        <h5>Le Perceptrone</h5>
+                        <img src='images/slides/perceptrone1.jpg' style="width: 64%"/>
+                    </section>
+                    <section>
+                        <h5>Le Perceptrone</h5>
+                        <img src='images/slides/perceptrone2.jpg' style="width: 64%"/>
+                    </section>
+                    <section>
+                        <h5>La neurone</h5>
+                        <img src='images/slides/neurone.png' style="width: 64%"/>
+                    </section>
+                    <section>
+                        <h5>Les poids</h5>
+                        <img src='images/slides/poids.png' style="width: 64%"/>
+                        <p>Sj = Somme(Wij.Yi); i 0-->n</p>
+                    </section>
+                </section>
+                <section>
+                    <h3>L'apprentissage</h3>
+                    <section>
+                        <h5>Backward Propagation</h5>
+                        <p>Le plus connus et le plus rapide</p>
+                        <p>Utile quand on a suffisament de données</p>
+                        <p>Utilisé pour le supervised learning</p>
+                    </section>
+                    <section>
+                        <h5>Genetic learning</h5>
+                        <p>Utile quand on n'a pas suffisament de données</p>
+                        <p>Si on connais seulement le but et on connais pas comment l'atteindre</p>
+                        <p>Utilisé pour le unsupervised learning</p>
+                    </section>
+                    <section>
+                        <h5>Metrics</h5>
+                        <p>Network configuration</p>
+                        <ul>
+                            <li>learning rate</li>
+                            <li>hidden layers</li>
+                            <li>number of neurones per hidden layer</li>
+                            <li>squashing function</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h5>Metrics</h5>
+                        <p>Training set & validation set</p>
+                        <ul>
+                            <li>Accurancy</li>
+                            <li>Error tolerance</li>
+                            <li>Overfed networks</li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <h3>Data processing</h3>
+                    <section>
+                        <h5>Input/output</h5>
+                        <ul>
+                            <li>Binaire flou</li>
+                            <li>Minimiser l'input sans perdre l'information</li>
+                            <li>L'input est relative au probleme mais aussi au réseau</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h5>Convolution</h5>
+                        <p>La convolution est une fonction determinant la valeur d'une variable par rapport à son entourage</p>
+                        <p>Pas de règle fix, encore une fois ça depend du problem et du réseau</p>
+                    </section>
+                </section>
+                <section>
+                    <h3>Examples de Perceptrons</h3>
+                    <section>
+                        <h2>Xor</h2>
+                    </section>
+                    <section>
+                        <h2>Next char</h2>
+                    </section>
+                    <section>
+                        <h2>Sun or Moon</h2>
+                    </section>
+                </section>
+                <section data-background="images/slides/end.jpg">
+                    <h1 class="fragment grow highlight-red">Merci</h1>
+                </section>
+            </div>
+        </div>
+        <script src="bower_components/reveal.js/lib/js/head.min.js"></script>
+        <script src="bower_components/reveal.js/js/reveal.js"></script>
+        <script>
+            
+            // Full list of configuration options available at:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                transition: 'slide',
+
+                // Optional reveal.js plugins
+                dependencies: [
+                    { src: 'bower_components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'bower_components/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'bower_components/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'bower_components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true },
+                    { src: 'bower_components/reveal.js/plugin/notes/notes.js', async: true }
+                ]
+            });
+
+        </script>
+    </body>
+</html>

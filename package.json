@@ -1,0 +1,16 @@
+{
+  "name": "tuto-nn",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "easyimage": "^2.1.0",
+    "img2lcd": "^1.1.0",
+    "synaptic": "^1.1.4"
+  }
+}
