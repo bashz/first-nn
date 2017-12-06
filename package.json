@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "serve": "cd public && node ../node_modules/live-server/live-server.js --port=3999 --host=localhost --entry-file=index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -11,6 +12,7 @@
   "dependencies": {
     "easyimage": "^2.1.0",
     "img2lcd": "^1.1.0",
+    "live-server": "^1.2.0",
     "synaptic": "^1.1.4"
   }
 }

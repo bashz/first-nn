@@ -1,0 +1,21 @@
+.lang{
+    position: fixed;
+    left: 0;
+    z-index: 5;
+  }
+  .lang a {
+    display: block;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.85);
+    padding: 4px 6px;
+    margin: 8px 0;
+    background-color: #abcdef;
+    color: #2f442F;
+    position: relative;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    text-decoration: none;
+  }
+  .lang a:hover {
+    box-shadow: 1px 4px 3px rgba(0, 0, 0, 0.85);
+    top: -2px;
+  }

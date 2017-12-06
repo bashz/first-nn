@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title data-lang="Neural Networks in a glance"></title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Bechir Nemlaghi">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="bower_components/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="bower_components/reveal.js/lib/css/zenburn.css">
+    <link rel="stylesheet" href="bower_components/reveal.js/css/theme/blood.css" id="theme">
+    <link rel="stylesheet" href="css/lang.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/4.0.0/i18next.min.js"></script>
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'bower_components/reveal.js/css/print/pdf.css' : 'bower_components/reveal.js/css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+
+<body>
+    <div class="lang">
+        <a href="?lang=en">En</a>
+        <a href="?lang=fr">Fr</a>
+    </div>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1 data-lang="Neural Networks in a glance"></h1>
+                <p>
+                    <small data-lang="Presented by">
+                        <a href="https://github.com/bashz">Bashz</a>
+                    </small>
+                </p>
+            </section>
+            <section>
+                <h1 data-lang="Buzz words"></h1>
+                <li data-lang="AI"></li>
+                <li data-lang="Machine learning"></li>
+                <li data-lang="Fuzzy control system (1980)"></li>
+                <li data-lang="Neural Network" class="fragment grow highlight-red"></li>
+                <li data-lang="Deep learning"></li>
+                <li data-lang="Data Science"></li>
+                <li data-lang="NLP"></li>
+                <li data-lang="Computer vision"></li>
+            </section>
+            <section>
+                <h4 data-lang="Neural Network"></h4>
+                <section>
+                    <img src='images/slides/perceptrone1.jpg' />
+                    <br>
+                    <b data-lang="Feed-forward Network"></b>
+                </section>
+                <section>
+                    <ul>
+                        <li data-lang="1 Input layer"></li>
+                        <li data-lang="N Hidden layers"></li>
+                        <li data-lang="1 Output layer"></li>
+                    </ul>
+                </section>
+                <section>
+                    <img src='images/slides/perceptrone2.jpg' style="width: 56%" />
+                    <br>
+                    <b data-lang="Feed-forward Network"></b>
+                </section>
+            </section>
+            <section>
+                <h4 data-lang="Neurons & Activation function"></h4>
+                <section>
+                    <img src='images/slides/neurone.png' />
+                    <br>
+                    <b data-lang="Segmoid squashing function"></b>
+                </section>
+                <section>
+                    <img src='images/slides/poids.png' />
+                    <br>
+                    <p>Sj = Somme(Wij.Yi); i 0-->n</p>
+                    <b data-lang="Vectorial product => GPU"></b>
+                </section>
+                <section>
+                    <h5 data-lang="Metrics"></h5>
+                    <p data-lang="Network configuration"></p>
+                    <ul>
+                        <li data-lang="number of hidden layers"></li>
+                        <li data-lang="number of neurones per hidden layer"></li>
+                        <li data-lang="squashing functions"></li>
+                        <li data-lang="learning rate"></li>
+                    </ul>
+                </section>
+            </section>
+            <section>
+                <h4 data-lang="Learning"></h4>
+                <section>
+                    <h5 data-lang="XOR"></h5>
+                    <img src='images/slides/xor.png' style="background-color: white" />
+                </section>
+                <section>
+                    <h5 data-lang="Backward Propagation"></h5>
+                    <p data-lang="Most used"></p>
+                    <p data-lang="Useful when we have enough data"></p>
+                    <p data-lang="Used on supervised learning"></p>
+                </section>
+                <section>
+                    <h5 data-lang="How we teach it"></h5>
+                    <p data-lang="We provide the network with an input"></p>
+                    <p data-lang="We activate the network"></p>
+                    <p data-lang="We let the network know about the wanted output (target)"></p>
+                    <p data-lang="We repeat until we are satisfied by the result of the activation"></p>
+                </section>
+                <section>
+                    <h5 data-lang="Metrics"></h5>
+                    <ul>
+                        <li data-lang="Accurancy"></li>
+                        <li data-lang="Error tolerance"></li>
+                        <li data-lang="Training set & validation set"></li>
+                        <li data-lang="Overfed networks"></li>
+                    </ul>
+                </section>
+            </section>
+            <section>
+                <h3 data-lang="Data processing"></h3>
+                <section>
+                    <h5 data-lang="Input/output"></h5>
+                    <ul>
+                        <li data-lang="Fuzzy Binairy"></li>
+                        <li data-lang="Minimize the inputs wihtout loosing information"></li>
+                        <li data-lang="Convolution, MFCC, pooling..."></li>
+                    </ul>
+                </section>
+                <section>
+                    <h5 data-lang="Normalization"></h5>
+                    <ul>
+                        <li data-lang="Normal-Range"></li>
+                        <li data-lang="Example-Range" class="fragment fade-up"></li>
+                        <li data-lang="Normal-List"></li>
+                        <li data-lang="Example-List" class="fragment fade-up"></li>
+                    </ul>
+                </section>
+            </section>
+            <section>
+                <h3 data-lang="Practice"></h3>
+                <section>
+                    <h2 data-lang="XOR"></h2>
+                </section>
+                <section>
+                    <h2 data-lang="Spider Game"></h2>
+                </section>
+                <section>
+                    <h2 data-lang="Sun or Moon"></h2>
+                </section>
+            </section>
+            <section data-background="images/slides/end.jpg">
+                <h1 data-lang="Thanks" class="fragment grow highlight-red"></h1>
+            </section>
+        </div>
+    </div>
+    <script src="bower_components/reveal.js/lib/js/head.min.js"></script>
+    <script src="bower_components/reveal.js/js/reveal.js"></script>
+    <script>
+
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            transition: 'slide',
+
+            // Optional reveal.js plugins
+            dependencies: [
+                { src: 'bower_components/reveal.js/lib/js/classList.js', condition: function () { return !document.body.classList; } },
+                { src: 'bower_components/reveal.js/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: 'bower_components/reveal.js/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: 'bower_components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+                { src: 'bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true },
+                { src: 'bower_components/reveal.js/plugin/notes/notes.js', async: true }
+            ]
+        });
+
+    </script>
+    <script src="js/lang.js"></script>
+</body>
+
+</html>
