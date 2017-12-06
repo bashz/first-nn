@@ -70,7 +70,7 @@ i18next.init({
     fr: {
       translation: {
         "Neural Networks in a glance": "Les Réseaux de neurones en un clin d'oeil",
-        "Presented by": "Présenté",
+        "Presented by": "Présenté par",
         "Buzz words": "Mots buzz",
         "AI": "IA",
         "Machine learning": "Machine learning",
