@@ -2,20 +2,7 @@ var fs = require("fs");
 var path = require('path');
 var img2lcd = require('img2lcd');
 
-
-var getAllFilesFromFolder = function(dir) {
-  var results = [];
-  fs.readdirSync(dir).forEach(function(file) {
-
-    file = dir+'/'+file;
-    var stat = fs.statSync(file);
-
-    if (stat && !stat.isDirectory()) 
-      results.push(file);
-
-  });
-  return results;
-};
+var getAllFilesFromFolder = require('./getAllFilesFromFolder');
 
 var files = getAllFilesFromFolder(path.resolve(__dirname, 'images/suns/processed'));
 files = files.concat(getAllFilesFromFolder(path.resolve(__dirname, 'images/moons/processed')));

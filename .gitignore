@@ -5,5 +5,8 @@ node_modules/
 generations/
 
 images/*/processed
+images/bin.json
+images/psun.png
+images/pmoon.png
 
 *~

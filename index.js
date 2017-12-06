@@ -58,49 +58,4 @@ fs.readFile(path.resolve(__dirname, file), 'utf8', function (err, json) {
   },function (err) {
     console.log(err);
   });
-
-  easyimg.rescrop({
-    src: 'images/hand.png', dst:'images/phand.png',
-    width:54, height:54,
-    cropwidth:48, cropheight:54,
-    x:0, y:-8,
-    flatten: true
-  }).then(function(image) {
-    img2lcd.convert('images/phand.png', function(err, hex){
-      if(err) {
-        console.log("Bad image path");
-        return err;
-      }
-      var hexArray = hex.split(',');
-      for(var j = 0; j < hexArray.length; j++) {
-        hexArray[j] = hexArray[j]/0xff;
-      }
-      console.log('sun', perceptron.activate(hexArray));
-    })
-  },function (err) {
-    console.log(err);
-  });
-
-  easyimg.rescrop({
-    src: 'images/chams.png', dst:'images/pchams.png',
-    width:54, height:54,
-    cropwidth:48, cropheight:54,
-    x:0, y:-8,
-    flatten: true
-  }).then(function(image) {
-    img2lcd.convert('images/pchams.png', function(err, hex){
-      if(err) {
-        console.log("Bad image path");
-        return err;
-      }
-      var hexArray = hex.split(',');
-      for(var j = 0; j < hexArray.length; j++) {
-        hexArray[j] = hexArray[j]/0xff;
-      }
-      console.log('chams', perceptron.activate(hexArray));
-    })
-  },function (err) {
-    console.log(err);
-  });
-
 });

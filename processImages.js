@@ -1,23 +1,10 @@
-var fs = require("fs");
 var path = require('path');
 var easyimg = require('easyimage');
 
 var args = process.argv.slice(2);
 var folder = args[0];
 
-var getAllFilesFromFolder = function(dir) {
-  var results = [];
-  fs.readdirSync(dir).forEach(function(file) {
-
-    file = dir+'/'+file;
-    var stat = fs.statSync(file);
-
-    if (stat && !stat.isDirectory()) 
-      results.push(file);
-
-  });
-  return results;
-};
+var getAllFilesFromFolder = require('./getAllFilesFromFolder');
 
 var files = getAllFilesFromFolder(path.resolve(__dirname, 'images/' + folder + '/original'));
 

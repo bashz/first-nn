@@ -25,8 +25,8 @@ fs.readFile(path.resolve(__dirname, file), 'utf8', function (err, json) {
     var inputs = JSON.parse(json);
     var right = 0;
     var wrong = 0;
-    for(var i = 0; i < 1000000; i++) {
-      var index = Math.round(Math.random() * 47);
+    for(var i = 0; i < 10000; i++) {
+      var index = Math.floor(Math.random() * 48);
       var output = perceptron.activate(inputs[index]);
       perceptron.propagate(learningRate, [1&(index < 24)]);
       if(!(i%1000))
@@ -38,7 +38,7 @@ fs.readFile(path.resolve(__dirname, file), 'utf8', function (err, json) {
     }
     console.log(inputs.length)
     console.log(right + ' right answers & ' + wrong + ' wrong answers');
-    console.log('accurency: ' + right/1000000);
+    console.log('accurency: ' + right/10000);
   
     if(!generation)
       generation = 0;
